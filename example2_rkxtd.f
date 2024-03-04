@@ -193,7 +193,7 @@
         end
 
 !-------AHOY! S3:initialise data
-        subroutine initialise (hx,hy,a,b,axy,pb,paxy,d,
+        subroutine initialise (hx,hy,a,b,axy,d,pb,paxy,
      c         k,w,jacobk,N,ns)
         real*8 a(ns), b(ns), d(N+1,ns), axy(ns,ns), 
      c         pa(ns), pb(ns), paxy(ns,ns),
