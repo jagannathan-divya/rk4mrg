@@ -53,7 +53,7 @@
           open(unit=1, file=filename)
         endif
 
-!       initialise the state variables [w,h]
+!       initialise the state variables [q,h]
         qx = qx0
         hx = (2.d0/pi)*(gsqt/(gsqt**2 + k**2))*qx
         time = 0.d0
@@ -75,7 +75,7 @@
            frcxi(istage) = sin(freq*(time+a(istage)*dt))-alp*qxi(istage)
           enddo
          endif
-!        construct the final stage
+!        construct the state at next step
          call compute_hintegral (k,hx,1.d0,w,jacobk,hintegral,nk)
          qx = hintegral + dt*(sum(b*frcxi))
          hx = (2.d0/pi)*dt*(gsqt/(gsqt**2 + k**2))*matmul(d,frcxi)+
