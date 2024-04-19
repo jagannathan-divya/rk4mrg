@@ -8,7 +8,7 @@
         integer, parameter :: nk = 51
         integer, parameter :: nstage = 4
         integer, parameter :: n2pow = 3
-        real, parameter :: pi=4.d0*datan(1.d0)
+        real*8, parameter :: pi=4.d0*datan(1.d0)
         real*8 :: startTime, endTime
         real*8 :: hx(nk+1), hy(nk+1), k(nk+1), jacobk(nk+1), w(nk+1),
      c        ckdummy(nk+1), qxi(nstage), frcxi(nstage),
