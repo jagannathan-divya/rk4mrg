@@ -372,7 +372,7 @@
 
 !       AHOY! S8: forcing for the slip vel eqn
         subroutine qFrcng (qx,qy,time,fatxy,frcx,frcy,alp,denR)
-	implicit real*8 (a-h,k-l,o-z)
+	    implicit real*8 (a-h,k-l,o-z)
         real*8 frcx,frcy,time,qx,qy, fatxy(8)
         frcx=(1.d0/denR-1.d0)*(fatxy(3)+fatxy(1)*fatxy(5)+
      c       fatxy(2)*fatxy(6))-(alp*qx)-(qx*fatxy(5)+qy*fatxy(6))
